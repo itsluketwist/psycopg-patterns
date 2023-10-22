@@ -1,7 +1,7 @@
-# **python-template**
+# **psycopg-patterns**
 
 
-![check code workflow](https://github.com/itsluketwist/python-template/actions/workflows/check.yaml/badge.svg)
+![check code workflow](https://github.com/itsluketwist/psycopg-patterns/actions/workflows/check.yaml/badge.svg)
 
 
 <div>
@@ -13,21 +13,21 @@
     <a href="https://www.python.org/">
         <img alt="Python 3" src="https://img.shields.io/badge/Python_3-blue?style=for-the-badge&logo=python&logoColor=white" />
     </a>
+    <a href="https://www.psycopg.org/">
+        <img alt="psycopg" src="https://img.shields.io/badge/psycopg-green?style=for-the-badge&logo=python&logoColor=white" />
+    </a>
 </div>
-
 
 ## *usage*
 
-Once cloned, find and replace all instances of `python-template` with the new repository name.
-Remove below `README.md` sections where appropriate (whether this is a project or library), 
-similarly determine whether the `pyproject.toml` or `requirements.txt` files are necessary.
+Contains some basic coding patterns / utils for when using the `psycopg` library...
 
 ## *installation*
 
 Install directly from GitHub, using pip:
 
 ```shell
-pip install git+https://github.com/itsluketwist/python-template
+pip install git+https://github.com/itsluketwist/psycopg-patterns
 ```
 
 ## *development*
@@ -35,20 +35,10 @@ pip install git+https://github.com/itsluketwist/python-template
 Clone the repository code:
 
 ```shell
-git clone https://github.com/itsluketwist/python-template.git
+git clone https://github.com/itsluketwist/psycopg-patterns.git
 ```
 
-_(for projects...)_ Once cloned, install the requirements locally in a virtual environment:
-
-```shell
-python -m venv venv
-
-. venv/bin/activate
-
-pip install -r requirements-dev.txt
-```
-
-_(for libraries...)_ Once cloned, install the package locally in a virtual environment:
+Once cloned, install the package locally in a virtual environment:
 
 ```shell
 python -m venv venv
@@ -68,11 +58,6 @@ pre-commit autoupdate
 pre-commit run --all-files
 ```
 
-## *todos*
-
-- Add docs template / support.
-
-
 ## *testing*
 
 Run the test suite using:
@@ -84,4 +69,4 @@ pytest .
 
 ## *inspiration*
 
-This is currently how I like to make python projects/libraries, it ain't that deep.
+I found myself re-writing similar code every time I used `psycopg`, decided to package it up for myself.

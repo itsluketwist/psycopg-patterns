@@ -6,9 +6,9 @@ build-backend = "setuptools.build_meta"
 packages = ["src"]
 
 [project]
-name = "python_template"
+name = "psycopg_patterns"
 version = "0.0.0"
-description = "python-template..."
+description = "Simple psycopg coding patterns..."
 readme = "README.md"
 authors = [{ name = "Lukas Twist", email = "itsluketwist@gmail.com" }]
 license = { file = "LICENSE" }
@@ -17,8 +17,10 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["python-template"]
-dependencies = []
+keywords = ["psycopg", "database", "utils"]
+dependencies = [
+    "psycopg",
+]
 requires-python = ">=3.10"
 
 [project.optional-dependencies]
@@ -28,4 +30,4 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/itsluketwist/python-template"
+Homepage = "https://github.com/itsluketwist/psycopg-patterns"

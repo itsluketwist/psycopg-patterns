@@ -17,7 +17,7 @@ repos:
         args: ["--line-length=88", "--multi-line=3", "--lines-after-imports=2", "--trailing-comma"]
 # black
 -   repo: https://github.com/psf/black
-    rev: '23.9.1'
+    rev: '23.10.0'
     hooks:
     -   id: black
 # autoflake
@@ -34,7 +34,7 @@ repos:
         args: ["--max-line-length=100", "--extend-ignore=E203"]
 # mypy
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 'v1.6.0'
+    rev: 'v1.6.1'
     hooks:
       - id: mypy
         args: ["--show-error-codes", "--ignore-missing-imports"]
