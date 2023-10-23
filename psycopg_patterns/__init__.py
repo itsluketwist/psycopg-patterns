@@ -1,11 +1,11 @@
-from src.configure import (
+from psycopg_patterns.configure import (
     DatabaseVersion,
     build_conn_str,
     configure_conn_str,
     configure_db_ver,
     get_conn_str,
 )
-from src.query import execute, fetch_all, fetch_one, get_conn, select_all
+from psycopg_patterns.query import execute, fetch_all, fetch_one, get_conn, select_all
 
 
 __all__ = [

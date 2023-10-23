@@ -5,7 +5,7 @@ from typing import Any, Callable, Dict, Generator, List, Optional, Union
 from psycopg import ClientCursor, Connection, Cursor, connect
 from psycopg.rows import dict_row
 
-from src.configure import DatabaseVersion, get_conn_str
+from psycopg_patterns.configure import DatabaseVersion, get_conn_str
 
 
 logger = logging.getLogger(__name__)

@@ -22,6 +22,26 @@
 
 Contains some basic coding patterns / utils for when using the `psycopg` library...
 
+First configure the connection string in your environment:
+
+```shell
+export PSYCOPG_PATTERNS_CONN_STR=postgresql://postgres:postgres@localhost:5432/database_name
+```
+
+Then import and use:
+
+```python
+import psycopg_patterns as db
+
+result = db.fetch_one(
+    query="""
+        SELECT * FROM table_name
+        WHERE id = %(id)s;
+    """,
+    params={"id": 1},
+)
+```
+
 ## *installation*
 
 Install directly from GitHub, using pip:

@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from src import build_conn_str, get_conn
+import psycopg_patterns as db
 
 
 TEST_USERNAME = os.environ.get(
@@ -21,7 +21,7 @@ TEST_DATABASE = os.environ.get(
 
 @pytest.fixture(scope="session", autouse=True)
 def create_db():
-    base_db_conn = build_conn_str(
+    base_db_conn = db.build_conn_str(
         username=TEST_USERNAME,
         password=TEST_PASSWORD,
         hostname="localhost",
@@ -29,7 +29,7 @@ def create_db():
     )
 
     # create the testing database
-    with get_conn(conn_str=base_db_conn) as conn:
+    with db.get_conn(conn_str=base_db_conn) as conn:
         conn.autocommit = True
         cur = conn.cursor()
         cur.execute(query=f"DROP DATABASE IF EXISTS {TEST_DATABASE};")
@@ -39,7 +39,7 @@ def create_db():
     yield
 
     # remove the testing database
-    with get_conn(conn_str=base_db_conn) as conn:
+    with db.get_conn(conn_str=base_db_conn) as conn:
         conn.autocommit = True
         cur = conn.cursor()
         cur.execute(query=f"DROP DATABASE IF EXISTS {TEST_DATABASE};")
