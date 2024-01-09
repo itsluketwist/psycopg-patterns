@@ -1,7 +1,6 @@
 import logging
 import os
 from enum import Enum
-from typing import Optional, Union
 
 
 logger = logging.getLogger(__name__)
@@ -49,14 +48,14 @@ def build_conn_str(
 
 
 def configure_db_ver(
-    db_ver: Union[DatabaseVersion, str],
+    db_ver: DatabaseVersion | str,
 ) -> None:
     """
     Set the environment variable that determines which database version to use.
 
     Parameters
     ----------
-    db_ver : Union[DatabaseVersion, str]
+    db_ver : DatabaseVersion | str
     """
     os.environ[PSYCOPG_PATTERNS_DB_VER] = str(db_ver)
     logger.debug(
@@ -66,7 +65,7 @@ def configure_db_ver(
 
 def configure_conn_str(
     conn_str: str,
-    db_ver: Optional[Union[DatabaseVersion, str]] = None,
+    db_ver: DatabaseVersion | str | None = None,
 ) -> None:
     """
     Set the environment variable that determines which database version to use.
@@ -74,7 +73,7 @@ def configure_conn_str(
     Parameters
     ----------
     conn_str : str
-    db_ver : Union[DatabaseVersion, str] = None
+    db_ver : DatabaseVersion | str | None = None
     """
     if db_ver is None:
         # configure the default connection string
@@ -88,14 +87,14 @@ def configure_conn_str(
 
 
 def get_conn_str(
-    db_ver: Optional[Union[DatabaseVersion, str]] = None,
+    db_ver: DatabaseVersion | str | None = None,
 ) -> str:
     """
     Get the database connection string that has been configured via environment variables.
 
     Parameters
     ----------
-    db_ver : Union[DatabaseVersion, str] = None
+    db_ver : DatabaseVersion | str | None = None
 
     Returns
     -------

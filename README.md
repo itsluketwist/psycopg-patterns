@@ -1,8 +1,8 @@
 # **psycopg-patterns**
 
+Contains some basic coding patterns / utils for when using the `psycopg` library...
 
 ![check code workflow](https://github.com/itsluketwist/psycopg-patterns/actions/workflows/check.yaml/badge.svg)
-
 
 <div>
     <!-- badges from : https://shields.io/ -->
@@ -19,8 +19,6 @@
 </div>
 
 ## *usage*
-
-Contains some basic coding patterns / utils for when using the `psycopg` library...
 
 First configure the connection string in your environment:
 
