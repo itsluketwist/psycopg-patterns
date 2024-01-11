@@ -32,12 +32,12 @@ def build_conn_str(
 
     Parameters
     ----------
-    username : str
-    password : str
-    hostname : str
-    port : int
-    db_name : str
-    adapter : str = "postgresql"
+    username: str
+    password: str
+    hostname: str
+    db_name: str
+    port: int = 5432
+    adapter: str = "postgresql"
 
     Returns
     -------
@@ -55,7 +55,7 @@ def configure_db_ver(
 
     Parameters
     ----------
-    db_ver : DatabaseVersion | str
+    db_ver: DatabaseVersion | str
     """
     os.environ[PSYCOPG_PATTERNS_DB_VER] = str(db_ver)
     logger.debug(
@@ -72,8 +72,8 @@ def configure_conn_str(
 
     Parameters
     ----------
-    conn_str : str
-    db_ver : DatabaseVersion | str | None = None
+    conn_str: str
+    db_ver: DatabaseVersion | str | None = None
     """
     if db_ver is None:
         # configure the default connection string
@@ -94,7 +94,7 @@ def get_conn_str(
 
     Parameters
     ----------
-    db_ver : DatabaseVersion | str | None = None
+    db_ver: DatabaseVersion | str | None = None
 
     Returns
     -------

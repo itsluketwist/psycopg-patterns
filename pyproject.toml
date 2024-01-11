@@ -7,7 +7,7 @@ packages = ["psycopg_patterns"]
 
 [project]
 name = "psycopg_patterns"
-version = "0.0.0"
+version = "0.0.1"
 description = "Simple psycopg coding patterns..."
 readme = "README.md"
 authors = [{ name = "Lukas Twist", email = "itsluketwist@gmail.com" }]
@@ -19,7 +19,7 @@ classifiers = [
 ]
 keywords = ["psycopg", "database", "utils"]
 dependencies = [
-    "psycopg",
+    "psycopg ~= 3.1.17",
 ]
 requires-python = ">=3.10"
 

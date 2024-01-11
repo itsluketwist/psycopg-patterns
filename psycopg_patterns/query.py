@@ -23,10 +23,10 @@ def get_conn(
 
     Parameters
     ----------
-    conn_str : str | None = None
-    db_ver : DatabaseVersion | str | None = None
-    cur_type : Cursor = ClientCursor
-    row_type : Callable = dict_row
+    conn_str: str | None = None
+    db_ver: DatabaseVersion | str | None = None
+    cur_type: Cursor = ClientCursor
+    row_type: Callable = dict_row
 
     Returns
     -------
@@ -53,8 +53,8 @@ def execute(
 
     Parameters
     ----------
-    query : str
-    params : dict[str, Any] | None = None
+    query: str
+    params: dict[str, Any] | None = None
     """
     with get_conn() as conn:
         with conn.cursor() as cur:
@@ -71,8 +71,8 @@ def fetch_one(
 
     Parameters
     ----------
-    query : str
-    params : dict[str, Any] | None = None
+    query: str
+    params: dict[str, Any] | None = None
 
     Returns
     -------
@@ -99,8 +99,8 @@ def fetch_all(
 
     Parameters
     ----------
-    query : str
-    params : dict[str, Any] | None = None
+    query: str
+    params: dict[str, Any] | None = None
 
     Returns
     -------
@@ -126,7 +126,7 @@ def select_all(
 
     Parameters
     ----------
-    table : str
+    table: str
 
     Returns
     -------
